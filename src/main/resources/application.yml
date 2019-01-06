@@ -2,6 +2,7 @@ server:
   port: 8888
 
 spring:
+  profiles: prod
   datasource:
     driverClassName: org.postgresql.Driver
     url: ${JDBC_DATABASE_URL}
@@ -20,8 +21,6 @@ spring:
         connection:
           characterEnconding: UTF-8
           charSet: UTF-8
-  profiles:
-    active: prod
 
 logging:
    level:

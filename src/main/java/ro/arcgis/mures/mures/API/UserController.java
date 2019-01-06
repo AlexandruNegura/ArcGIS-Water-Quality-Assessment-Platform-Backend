@@ -17,10 +17,14 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping(value = UserController.USER_CONTROOLER_PATH, consumes = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
-    public static final String USER_CONTROOLER_PATH = Constants.API_PATH + "/users";
+    static final String USER_CONTROOLER_PATH = Constants.API_PATH + "/users";
+
+    private final UserRepository userRepository;
 
     @Autowired
-    private UserRepository userRepository;
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @PostMapping(value = "/register")
     @ResponseBody
