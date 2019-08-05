@@ -1,4 +1,4 @@
-# Arcgis Water Quality Assessment Platform
+# ArcGIS Water Quality Assessment Platform
 
 Me with 2 other colleagues developed a platform to monitor the toxicity of water along the river Mures. 
 
